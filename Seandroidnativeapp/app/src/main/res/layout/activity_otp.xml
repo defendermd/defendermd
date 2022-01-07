@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/otp_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.socialengineaddons.mobileapp.classes.core.OTPActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+        android:padding="@dimen/padding_15dp"
+        android:paddingStart="@dimen/padding_15dp"
+        android:paddingEnd="@dimen/padding_15dp">
+
+        <TextView
+            android:id="@+id/tvBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/ic_arrow_back"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:textColor="@color/black" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_120dp"
+                    android:layout_height="@dimen/dimen_120dp"
+                    android:layout_marginTop="@dimen/margin_20dp"
+                    android:layout_marginBottom="@dimen/margin_20dp"
+                    android:src="@drawable/ic_otp_message" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verification_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_64dp"
+                    android:paddingLeft="@dimen/padding_64dp"
+                    android:paddingTop="@dimen/padding_10dp"
+                    android:paddingEnd="@dimen/padding_64dp"
+                    android:paddingRight="@dimen/padding_64dp"
+                    android:text="@string/verification_code_descrition"
+                    android:textAlignment="center" />
+
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/verification_code_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tvError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/dimen_5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/red_color_picker"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/otp_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/layout_left_margin"
+                    android:layout_marginLeft="@dimen/layout_left_margin"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/layout_right_margin"
+                    android:layout_marginRight="@dimen/layout_right_margin"
+                    android:textColor="@color/blue_color_picker"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/resend_otp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/layout_left_margin"
+                    android:layout_marginLeft="@dimen/layout_left_margin"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/layout_right_margin"
+                    android:layout_marginRight="@dimen/layout_right_margin"
+                    android:text="@string/otp_resend_otp"
+                    android:textColor="@color/blue_color_picker"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.socialengineaddons.mobileapp.classes.common.ui.BaseButton
+                    android:id="@+id/otp_verify_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_42dp"
+                    android:layout_marginTop="@dimen/margin_50dp"
+                    android:layout_marginBottom="@dimen/margin_5dp"
+                    android:paddingStart="@dimen/dimen_85dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/size_16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/dimen_21dp"
+                    app:normalStateColor="@color/themeButtonColor"
+                    android:paddingLeft="@dimen/dimen_85dp"
+                    android:paddingEnd="@dimen/dimen_85dp"
+                    android:paddingRight="@dimen/dimen_85dp"
+                    android:text="@string/approve"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

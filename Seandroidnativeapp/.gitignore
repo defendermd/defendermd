@@ -1,0 +1,8 @@
+.gradle/
+local.properties
+.idea/
+Seandroidnativeapp.iml
+WordPressEditor/WordPressEditor.iml
+app/app.iml
+.DS_Store
+build/

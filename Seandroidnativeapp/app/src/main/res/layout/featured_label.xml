@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   Copyright (c) 2016 BigStep Technologies Private Limited.
+  ~
+  ~   You may not use this file except in compliance with the
+  ~   SocialEngineAddOns License Agreement.
+  ~   You may obtain a copy of the License at:
+  ~   https://www.socialengineaddons.com/android-app-license
+  ~   The full copyright and license information is also mentioned
+  ~   in the LICENSE file that was distributed with this
+  ~   source code.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/featuredLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_9sp"
+        android:background="@color/featured_label"
+        android:paddingLeft="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_5dp"
+        android:paddingTop="@dimen/padding_3dp"
+        android:paddingBottom="@dimen/padding_3dp"
+        android:paddingStart="@dimen/padding_5dp"
+        android:paddingEnd="@dimen/padding_5dp"
+        android:text="@string/featured"
+        android:visibility="gone"/>
+
+</LinearLayout>

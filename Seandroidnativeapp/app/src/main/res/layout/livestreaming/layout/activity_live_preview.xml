@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   Copyright (c) 2018 BigStep Technologies Private Limited.
+  ~
+  ~   You may not use this file except in compliance with the
+  ~   SocialEngineAddOns License Agreement.
+  ~   You may obtain a copy of the License at:
+  ~   https://www.socialengineaddons.com/android-app-license
+  ~   The full copyright and license information is also mentioned
+  ~   in the LICENSE file that was distributed with this
+  ~   source code.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/black_translucent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/end"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:layout_marginStart="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:paddingTop="@dimen/dimen_3dp"
+        android:paddingBottom="@dimen/dimen_3dp"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="@string/live_stream_end_text"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_medium_font_size"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_with_text"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:drawableEnd="@drawable/ic_settings_white_24dp"
+        android:drawableRight="@drawable/ic_settings_white_24dp"
+        android:layout_marginTop="@dimen/dimen_150dp"
+        android:gravity="center"
+        android:id="@+id/viewPrivacy"/>
+
+    <github.ankushsachdeva.emojicon.EmojiconEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/liveDescription"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textMultiLine|textCapSentences|textAutoComplete"
+        android:scrollbars="none"
+        android:maxHeight="@dimen/dimen_100dp"
+        android:hint="@string/post_content_placeholder"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:layout_marginStart="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:layout_below="@+id/viewPrivacy"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:maxLines="3"
+        android:imeOptions="actionDone"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textSize="@dimen/body_medium_font_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationAndTagFriends"
+        android:layout_below="@+id/liveDescription"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginRight="@dimen/margin_10dp"
+        android:layout_marginEnd="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:lineSpacingMultiplier="1.2"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textSize="@dimen/body_default_font_size"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bottomOptions"
+        android:minHeight="@dimen/margin_50dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cameraFlip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.25">
+
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:visibility="visible"
+                android:src="@drawable/camera_flip"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/margin_10dp"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/imageshape"
+                android:contentDescription="@string/image_caption" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/goLive"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/go_live"
+            android:gravity="center"
+            android:padding="@dimen/margin_10dp"
+            android:paddingStart="@dimen/margin_10dp"
+            android:paddingEnd="@dimen/margin_10dp"
+            android:textSize="@dimen/body_default_font_size"
+            android:background="@drawable/rounded_bg"
+            android:layout_weight="0.5"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/moreOptions"
+            android:gravity="center"
+            android:layout_weight="0.25">
+
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:visibility="visible"
+                android:src="@drawable/ic_more"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/margin_10dp"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/imageshape"
+                android:contentDescription="@string/image_caption" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

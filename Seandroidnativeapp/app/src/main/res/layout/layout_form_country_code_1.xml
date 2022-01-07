@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   Copyright (c) 2016 BigStep Technologies Private Limited.
+  ~
+  ~   You may not use this file except in compliance with the
+  ~   SocialEngineAddOns License Agreement.
+  ~   You may obtain a copy of the License at:
+  ~   https://www.socialengineaddons.com/android-app-license
+  ~   The full copyright and license information is also mentioned
+  ~   in the LICENSE file that was distributed with this
+  ~   source code.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_10dp">
+
+
+    <LinearLayout
+        android:id="@+id/selector_layout"
+        style="@style/formLayout2Widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_8dp"
+        android:paddingBottom="@dimen/dimen_9dp">
+
+        <TextView
+            android:id="@+id/view_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textSize="@dimen/body_default_font_size"
+            android:visibility="gone" />
+
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccpElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingLeft="@dimen/dimen_3dp"
+            android:paddingStart="@dimen/dimen_3dp"
+            app:ccp_textSize="@dimen/size_14sp" />
+
+        <TextView
+            android:id="@+id/error_view"
+            style="@style/fieldsValidationError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/view_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingStart="@dimen/padding_5dp"
+        android:paddingLeft="@dimen/padding_5dp"
+        android:paddingEnd="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_5dp"
+        android:textSize="@dimen/body_default_font_size"
+        android:visibility="gone" />
+
+
+</LinearLayout>

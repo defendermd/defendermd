@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~   Copyright (c) 2018 BigStep Technologies Private Limited.
+  ~
+  ~   You may not use this file except in compliance with the
+  ~   SocialEngineAddOns License Agreement.
+  ~   You may obtain a copy of the License at:
+  ~   https://www.socialengineaddons.com/android-app-license
+  ~   The full copyright and license information is also mentioned
+  ~   in the LICENSE file that was distributed with this
+  ~   source code.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/black_translucent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/liveText"
+        android:minWidth="@dimen/dimen_30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:paddingTop="@dimen/dimen_3dp"
+        android:paddingBottom="@dimen/dimen_3dp"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:visibility="invisible"
+        android:text="@string/live_stream_text"
+        android:textSize="@dimen/body_default_font_size"
+        android:textColor="@color/white"
+        android:background="@drawable/background_app_theme_color"/>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/liveTime"
+        android:minWidth="@dimen/dimen_40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/end"
+        android:layout_toLeftOf="@+id/end"
+        android:layout_margin="@dimen/margin_5dp"
+        android:layout_marginStart="@dimen/margin_5dp"
+        android:layout_marginEnd="@dimen/margin_5dp"
+        android:paddingTop="@dimen/dimen_3dp"
+        android:paddingBottom="@dimen/dimen_3dp"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="@dimen/body_medium_font_size"
+        android:textStyle="bold"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewCount"
+        android:visibility="gone"
+        android:minWidth="@dimen/dimen_30dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/liveText"
+        android:layout_toEndOf="@+id/liveText"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:paddingTop="@dimen/dimen_3dp"
+        android:paddingBottom="@dimen/dimen_3dp"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_medium_font_size"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:drawablePadding="@dimen/dimen_5dp"
+        android:drawableLeft="@drawable/ic_visibility_24dp"
+        android:drawableStart="@drawable/ic_visibility_24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/end"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:layout_marginStart="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_5dp"
+        android:paddingTop="@dimen/dimen_3dp"
+        android:paddingBottom="@dimen/dimen_3dp"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:paddingRight="@dimen/dimen_5dp"
+        android:paddingStart="@dimen/dimen_5dp"
+        android:paddingEnd="@dimen/dimen_5dp"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:text="@string/live_stream_end_text"
+        android:textStyle="bold"
+        android:textSize="@dimen/body_medium_font_size"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_live_stream_message"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/title_large_font_size"
+        android:textColor="@color/white"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/streamEndMessage"/>
+
+    <com.socialengineaddons.mobileapp.classes.modules.liveStreaming.ui.MaxHeightListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:maxHeight="@dimen/height_200dp"
+        android:dividerHeight="0dp"
+        android:divider="@color/transparent"
+        android:layout_marginTop="@dimen/margin_5dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:layout_above="@+id/bottomOptions"
+        android:stackFromBottom="true"
+        android:background="@drawable/gradient_bg_bottom_to_top"
+        android:id="@+id/commentList">
+    </com.socialengineaddons.mobileapp.classes.modules.liveStreaming.ui.MaxHeightListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bottomOptions"
+        android:visibility="invisible"
+        android:minHeight="@dimen/margin_50dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/cameraFlip"
+            android:gravity="center"
+            android:layout_weight="0.12">
+
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:visibility="visible"
+                android:src="@drawable/camera_flip"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/margin_10dp"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/imageshape"
+                android:contentDescription="@string/image_caption" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/write_comment_text"
+            android:padding="@dimen/dimen_7dp"
+            android:paddingStart="@dimen/dimen_7dp"
+            android:paddingEnd="@dimen/dimen_7dp"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/body_default_font_size"
+            android:background="@drawable/rounded_bg"
+            android:layout_weight=".4"
+            android:id="@+id/commentBox"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:clipToPadding="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="0.48"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="@dimen/button_size_content_card"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/likeView"
+            android:orientation="horizontal"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:visibility="visible"
+                android:id="@+id/likeBtn"
+                android:src="@drawable/ic_thumb_up_white_18dp"
+                android:scaleType="centerCrop"
+                android:padding="@dimen/margin_10dp"
+                android:paddingStart="@dimen/margin_10dp"
+                android:paddingEnd="@dimen/margin_10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:contentDescription="@string/image_caption" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "886489779607",
+    "firebase_url": "https://com-socialengineaddons-demo.firebaseio.com",
+    "project_id": "com-socialengineaddons-demo",
+    "storage_bucket": "com-socialengineaddons-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886489779607:android:31922922f2ad2d9f",
+        "android_client_info": {
+          "package_name": "com.socialengineaddons.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886489779607-j3221dm34374beslktnhta34lifap75r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBofUaD5w7WBn2IIM9Gux8JqyzL5_92Lkc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

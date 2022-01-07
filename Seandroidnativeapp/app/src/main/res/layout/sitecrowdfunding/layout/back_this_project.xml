@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_close"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cancel"
+            android:src="@drawable/ic_close"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/back_this_project"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+    <com.socialengineaddons.mobileapp.classes.common.ui.scrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_5dp"
+            android:paddingStart="@dimen/padding_5dp"
+            android:paddingEnd="@dimen/padding_5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dimen_5dp"
+                android:paddingBottom="@dimen/padding_10dp"
+                android:text="@string/choose_your_reward"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_18sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/without_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_10"
+                    android:paddingStart="@dimen/padding_10"
+                    android:paddingEnd="@dimen/padding_10">
+
+                    <TextView
+                        android:id="@+id/back_without_reward_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_expend_drop_down"
+                        android:drawableRight="@drawable/ic_expend_drop_down"
+                        android:padding="@dimen/padding_10dp"
+                        android:paddingStart="@dimen/padding_10"
+                        android:paddingEnd="@dimen/padding_10"
+                        android:text="@string/back_without_reward"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_17sp" />
+
+                    <LinearLayout
+                        android:id="@+id/reward_footer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/padding_15dp"
+                        android:paddingStart="@dimen/padding_15dp"
+                        android:paddingEnd="@dimen/padding_15dp"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/back_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edittext_backgroud"
+                            android:hint="@string/back_amount"
+                            android:inputType="numberDecimal" />
+
+                        <Button
+                            android:id="@+id/submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_30dp"
+                            android:layout_marginStart="@dimen/margin_5dp"
+                            android:layout_marginLeft="@dimen/margin_5dp"
+                            android:layout_weight="2"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/submit"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/back_with_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/with_reward_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/back_with_reward_option"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_expend_drop_down"
+                        android:drawableRight="@drawable/ic_expend_drop_down"
+                        android:padding="@dimen/padding_20dp"
+                        android:paddingStart="@dimen/padding_20dp"
+                        android:paddingEnd="@dimen/padding_20dp"
+                        android:text="@string/back_with_reward"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/size_17sp" />
+
+                    <FrameLayout
+                        android:id="@+id/rewards_frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </com.socialengineaddons.mobileapp.classes.common.ui.scrollview.ObservableScrollView>
+
+    <include layout="@layout/payment_bottom_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>

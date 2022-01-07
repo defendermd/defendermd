@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_5dp"
+    android:layout_marginEnd="@dimen/margin_5dp"
+    android:layout_marginTop="@dimen/margin_5dp"
+    android:layout_marginBottom="@dimen/margin_10dp"
+    android:gravity="top"
+    android:visibility="visible"
+    android:id="@+id/MoreCommentsBlock"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="@dimen/more_comment_progress_bar_width"
+        android:layout_height="@dimen/more_comment_progress_bar_height"
+        android:id="@+id/loadMoreProgressBlock"
+        android:layout_marginLeft="@dimen/margin_15dp"
+        android:layout_marginStart="@dimen/margin_15dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_refresh_black"
+            android:layout_gravity="center"
+            android:id="@+id/smallLoadIcon"
+            android:visibility="visible" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="@dimen/more_comment_progress_bar_width"
+            android:layout_height="@dimen/more_comment_progress_bar_height"
+            android:id="@+id/smallProgressBar"
+            android:padding="@dimen/progress_item_padding"
+            android:paddingStart="@dimen/progress_item_padding"
+            android:paddingEnd="@dimen/progress_item_padding"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/more_comment_progress_bar_height"
+        android:layout_toRightOf="@+id/loadMoreProgressBlock"
+        android:layout_toEndOf="@+id/loadMoreProgressBlock"
+        android:id="@+id/loadMoreCommentText"
+        android:text="@string/previous_comment_text"
+        android:textSize="@dimen/more_comments_title_fontSize"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerVertical="true"/>
+
+</LinearLayout>

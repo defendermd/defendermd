@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~   Copyright (c) 2018 BigStep Technologies Private Limited.
+  ~
+  ~   You may not use this file except in compliance with the
+  ~   SocialEngineAddOns License Agreement.
+  ~   You may obtain a copy of the License at:
+  ~   https://www.socialengineaddons.com/android-app-license
+  ~   The full copyright and license information is also mentioned
+  ~   in the LICENSE file that was distributed with this
+  ~   source code.
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/form_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/padding_15dp">
+
+    <TextView
+        android:id="@+id/view_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="@dimen/padding_5dp"
+        android:paddingLeft="@dimen/padding_5dp"
+        android:paddingEnd="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_5dp"
+        android:textSize="@dimen/body_default_font_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/view_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_5dp"
+        android:paddingLeft="@dimen/padding_5dp"
+        android:paddingEnd="@dimen/padding_5dp"
+        android:paddingRight="@dimen/padding_5dp"
+        android:textSize="@dimen/body_default_font_size"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlEditTextWrapper"
+        style="@style/formLayout2Widget"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_7dp"
+        android:paddingBottom="@dimen/padding_7dp">
+
+        <EditText
+            android:id="@+id/field_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_toStartOf="@+id/btn_check_url"
+            android:layout_toLeftOf="@+id/btn_check_url"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|top"
+            android:inputType="text"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:paddingRight="@dimen/padding_10dp"
+            android:textSize="@dimen/body_default_font_size"
+            android:autofilledHighlight="@color/transparent"
+            android:visibility="visible" />
+
+        <com.socialengineaddons.mobileapp.classes.common.ui.BaseButton
+            android:id="@+id/btn_check_url"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:text="@string/check_url"
+            android:textAllCaps="false"
+            android:textColor="@color/themeButtonColor"
+            android:visibility="gone"
+            app:normalStateColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:drawableStart="@drawable/ic_app_icons_invisible_eye_icon_outlined"
+            android:drawableLeft="@drawable/ic_app_icons_invisible_eye_icon_outlined"
+            android:paddingBottom="@dimen/dimen_5dp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/sentToLoadingProgressBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_5dp"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:paddingTop="@dimen/padding_5dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.socialengineaddons.mobileapp.classes.common.ui.NestedListView
+        android:id="@+id/friendListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:visibility="gone">
+
+    </com.socialengineaddons.mobileapp.classes.common.ui.NestedListView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addedFriendList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/added_friend_list_view_height"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/location_field_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:background="@drawable/rounded_widget"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:hint="@string/location_label"
+        android:maxLines="2"
+        android:paddingStart="@dimen/padding_10dp"
+        android:paddingLeft="@dimen/padding_10dp"
+        android:paddingTop="@dimen/dimen_13dp"
+        android:paddingEnd="@dimen/padding_10dp"
+        android:paddingRight="@dimen/padding_10dp"
+        android:paddingBottom="@dimen/dimen_18dp"
+        android:textSize="@dimen/body_default_font_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/error_view"
+        style="@style/fieldsValidationError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

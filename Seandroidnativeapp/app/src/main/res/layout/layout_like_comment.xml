@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~
+  ~ Copyright (c) 2016 BigStep Technologies Private Limited.
+  ~
+  ~ You may not use this file except in compliance with the
+  ~ SocialEngineAddOns License Agreement.
+  ~ You may obtain a copy of the License at:
+  ~ https://www.socialengineaddons.com/android-app-license
+  ~ The full copyright and license information is also mentioned
+  ~ in the LICENSE file that was distributed with this
+  ~ source code.
+  ~
+  -->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/button_size_content_card"
+        android:layout_gravity="center"
+        android:id="@+id/like_view"
+        android:orientation="horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin_8dp"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_gravity="center"
+            android:id="@+id/reactionIcon"/>
+
+        <com.socialengineaddons.mobileapp.classes.common.ui.ActionIconThemedTextView
+            android:id="@+id/like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/element_spacing_normal"
+            android:paddingStart="@dimen/element_spacing_normal"
+            android:paddingRight="@dimen/element_spacing_normal"
+            android:paddingEnd="@dimen/element_spacing_normal"
+            android:drawablePadding="@dimen/element_spacing_normal"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceSmall"
+            app:iabActivatedColor="@color/themeButtonColor"
+            app:iabColor="?android:textColorTertiary"/>
+
+        <com.socialengineaddons.mobileapp.classes.common.ui.ActionIconThemedTextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dimen_1dp"
+            android:paddingStart="@dimen/dimen_1dp"
+            android:paddingRight="@dimen/element_spacing_normal"
+            android:paddingEnd="@dimen/element_spacing_normal"
+            android:textAppearance="?android:textAppearanceSmall"
+            app:iabActivatedColor="@color/themeButtonColor"
+            app:iabColor="?android:textColorTertiary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/button_size_content_card"
+        android:layout_gravity="center"
+        android:id="@+id/comment_view"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center">
+        <com.socialengineaddons.mobileapp.classes.common.ui.ActionIconThemedTextView
+            android:id="@+id/comment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_comment_chat"
+            android:drawableStart="@drawable/ic_comment_chat"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/element_spacing_normal"
+            android:paddingStart="@dimen/element_spacing_normal"
+            android:paddingRight="@dimen/element_spacing_normal"
+            android:paddingEnd="@dimen/element_spacing_normal"
+            android:drawablePadding="@dimen/element_spacing_normal"
+            android:textAppearance="?android:textAppearanceSmall"
+            app:iabActivatedColor="@color/themeButtonColor"
+            app:iabColor="?android:textColorTertiary"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/button_size_content_card"
+        android:layout_gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/share_view"
+        android:gravity="center">
+        <com.socialengineaddons.mobileapp.classes.common.ui.ActionIconThemedTextView
+            android:id="@+id/share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_share_icon"
+            android:drawableStart="@drawable/ic_share_icon"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingLeft="@dimen/element_spacing_normal"
+            android:paddingStart="@dimen/element_spacing_normal"
+            android:paddingRight="@dimen/element_spacing_normal"
+            android:paddingEnd="@dimen/element_spacing_normal"
+            android:drawablePadding="@dimen/element_spacing_normal"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textStyle="bold"
+            app:iabActivatedColor="@color/themeButtonColor"
+            app:iabColor="?android:textColorTertiary"/>
+    </LinearLayout>
+
+</merge>

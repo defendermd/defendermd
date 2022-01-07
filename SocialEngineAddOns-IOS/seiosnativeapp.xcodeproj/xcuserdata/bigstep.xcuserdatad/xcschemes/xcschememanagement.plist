@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>seiosnativeapp.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>seiosnativeappTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>share.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+<<<<<<< HEAD
+=======
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>EB7DF57C1A42921C004628E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+>>>>>>> 89a4806160b319745497f1bb670cdf1433be40d9
+		</dict>
+		<key>EB7DF5941A42921D004628E7</key>
+		<dict>
+<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>4</integer>
+=======
+			<key>primary</key>
+			<true/>
+>>>>>>> 89a4806160b319745497f1bb670cdf1433be40d9
+		</dict>
+		<key>EBD835931E1FA07A00B4F594</key>
+		<dict>
+<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>3</integer>
+=======
+			<key>primary</key>
+			<true/>
+>>>>>>> 89a4806160b319745497f1bb670cdf1433be40d9
+		</dict>
+	</dict>
+</dict>
+</plist>

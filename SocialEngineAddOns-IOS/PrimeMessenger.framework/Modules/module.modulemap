@@ -1,0 +1,11 @@
+framework module PrimeMessenger {
+  umbrella header "PrimeMessenger.h"
+
+  export *
+  module * { export * }
+}
+
+module PrimeMessenger.Swift {
+    header "PrimeMessenger-Swift.h"
+    requires objc
+}

@@ -1,0 +1,83 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.3'
+
+def seiosnativeapp_pods
+  $chApiVersion = '4.0.5'
+  $chUIVersion = '4.0.6'
+  $chCallVersion = '4.0.4'
+  pod 'Kingfisher', '4.10.0'
+  pod 'FBAudienceNetwork'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'NVActivityIndicatorView', '4.5.1'
+  #pod 'SwiftyGif'
+  pod 'Shimmer', '1.0.2'
+  #pod 'CropViewController'
+  pod 'IGRPhotoTweaks', '1.0.8'
+  pod 'TTTAttributedLabel', '2.0.0'
+  pod 'GoogleMaps', '3.6.0'
+  pod 'KYCircularProgress', '1.2.1'
+  #pod 'AMProgressBar'
+  pod 'GradientLoadingBar', '~> 1.0'
+  pod 'Instructions', :git => 'https://github.com/shubham-gupta-bs/Instructions.git', :branch => 'bigstep/v1.0'
+  pod 'SquareFlowLayout', :git => 'https://github.com/Kaleem-b-bigstep/SquareFlowLayout.git', :branch => 'SquareFlowLayout/v1.0'
+  pod 'Firebase/Core', '5.15.0'
+  pod 'Firebase/Messaging', '5.15.0'
+  pod 'Crashlytics', '3.12.0'
+  pod 'Fabric', '1.9.0'
+  pod 'AgoraRtcEngine_iOS', '2.9.1'
+  pod 'AgoraSig_iOS'
+  $awsVersion = '2.9.3'
+  pod 'AWSMobileClient', $awsVersion
+  pod 'AWSIoT', $awsVersion
+  pod 'QRCodeReader.swift', :path => '.'
+  pod 'InputBarAccessoryView', '4.2.2'
+  pod 'IHProgressHUD', :git => 'https://github.com/Swiftify-Corp/IHProgressHUD.git'
+  pod 'Alamofire', '4.8.2'
+  pod 'AlamofireObjectMapper', '5.2.0'
+  pod 'SDWebImageFLPlugin', '0.4.0'
+  pod 'MaterialComponents'
+  pod 'DifferenceKit'
+end
+
+target 'seiosnativeapp' do
+# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+use_frameworks!
+
+# Pods for seiosnativeapp
+seiosnativeapp_pods
+
+target 'seiosnativeappTests' do
+inherit! :search_paths
+# Pods for testing
+end
+
+end
+
+
+
+target 'share' do
+# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+use_frameworks!
+
+# Pods for share
+
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == "Instructions"
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.0'
+            end
+            else
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.2'
+            end
+        end
+    end
+    installer.pods_project.build_configurations.each do |config|
+        config.build_settings.delete('CODE_SIGNING_ALLOWED')
+        config.build_settings.delete('CODE_SIGNING_REQUIRED')
+    end
+end

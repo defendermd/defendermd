@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>886489779607-mbcqn30en32blfmpb2es4bq5j0dhrgfo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.886489779607-mbcqn30en32blfmpb2es4bq5j0dhrgfo</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>886489779607-5k75optq7crkn4d9a8bgkp6hfc73gn1p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBlHrvmYzfLGXkyDXaWQw0Ph5xBBRsDKy8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>886489779607</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.seao.seiosnativeapp</string>
+	<key>PROJECT_ID</key>
+	<string>com-socialengineaddons-demo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>com-socialengineaddons-demo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:886489779607:ios:42c4216a0f3121ee4bc8d2</string>
+	<key>DATABASE_URL</key>
+	<string>https://com-socialengineaddons-demo.firebaseio.com</string>
+</dict>
+</plist>

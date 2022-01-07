@@ -1,2 +1,0 @@
-include ':app', ':WordPressEditor'
-include ':emoticon', ':showcasecard'

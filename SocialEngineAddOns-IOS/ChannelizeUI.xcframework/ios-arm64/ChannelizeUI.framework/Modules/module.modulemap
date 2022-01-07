@@ -1,0 +1,11 @@
+framework module ChannelizeUI {
+  umbrella header "ChannelizeUI.h"
+
+  export *
+  module * { export * }
+}
+
+module ChannelizeUI.Swift {
+    header "ChannelizeUI-Swift.h"
+    requires objc
+}

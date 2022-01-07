@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AGORA_API_KEY</key>
+	<string>25d85ed806e6450e99490f887dbf64b1</string>
+	<key>GIPHY_API_KEY</key>
+	<string>Jcvyks88J7LATW5T24fv40lAgcWBlAAZ</string>
+	<key>MAP_API_KEY</key>
+	<string>AIzaSyArBM9KKsj7UIrqlf0VVF1ajZwrKwX7SN0</string>
+	<key>PUBLIC_KEY</key>
+	<string>kuK4bj8GTqB6MiLY</string>
+</dict>
+</plist>

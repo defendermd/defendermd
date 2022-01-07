@@ -1,0 +1,425 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 effective-4.2 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -Onone -module-name ChannelizeUI
+import AVFoundation
+import AVKit
+import Alamofire
+import ChannelizeAPI
+@_exported import ChannelizeUI
+import DifferenceKit
+import Foundation
+import IHProgressHUD
+import InputBarAccessoryView
+import MapKit
+import MaterialComponents
+import MaterialComponents.MaterialProgressView
+import MobileCoreServices
+import ObjectMapper
+import Photos
+import QuartzCore
+import QuickLook
+import SDWebImage
+import SDWebImageFLPlugin
+import Swift
+import UIKit
+extension Double {
+  public func stringFromTimeInterval() -> Swift.String
+  public func asString(style: Foundation.DateComponentsFormatter.UnitsStyle) -> Swift.String
+}
+extension UIView {
+  public func setTopAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutYAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setBottomAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutYAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setLeftAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutXAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setRightAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutXAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setHeightAnchor(constant: CoreGraphics.CGFloat)
+  public func setWidthAnchor(constant: CoreGraphics.CGFloat)
+  public func setCenterXAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutXAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setCenterYAnchor(relatedConstraint: UIKit.NSLayoutAnchor<UIKit.NSLayoutYAxisAnchor>, constant: CoreGraphics.CGFloat)
+  public func setViewAsCircle(circleWidth: CoreGraphics.CGFloat)
+  public func pinEdgeToSuperView(superView: UIKit.UIView)
+  public func setViewsAsSquare(squareWidth: CoreGraphics.CGFloat)
+  public func addRightBorder(with color: UIKit.UIColor?, andWidth borderWidth: CoreGraphics.CGFloat)
+  public func addTopBorder(with color: UIKit.UIColor?, andWidth borderWidth: CoreGraphics.CGFloat)
+  public func addBottomBorder(with color: UIKit.UIColor?, andWidth borderWidth: CoreGraphics.CGFloat)
+  public func addLeftBorder(with color: UIKit.UIColor?, andWidth borderWidth: CoreGraphics.CGFloat)
+  public enum AnimationKeyPath : Swift.String {
+    case opacity
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func flash(animation: UIKit.UIView.AnimationKeyPath, withDuration duration: Foundation.TimeInterval = 1.0, repeatCount: Swift.Float = 5)
+  public func addConstraintsWithFormat(format: Swift.String, views: UIKit.UIView...)
+  public func copyView<T>() -> T where T : UIKit.UIView
+}
+extension UITextField {
+  public func setDeviceWiseFont(fontSize: CoreGraphics.CGFloat, weight: UIKit.UIFont.Weight = .regular)
+  public func setLeftPadding(withPadding: CoreGraphics.CGFloat)
+  public func setLeftIcon(iconName: Swift.String, iconHeight: CoreGraphics.CGFloat)
+  public func addBottomBorder()
+  public func setBottomBorder()
+}
+extension URLSession {
+  public func synchronousDataTask(with url: Foundation.URL) -> (Foundation.Data?, Foundation.URLResponse?, Foundation.NSError?)
+  public func synchronousDataTask(with request: Foundation.URLRequest) -> (Foundation.Data?, Foundation.URLResponse?, Foundation.NSError?)
+}
+public class ABLoader {
+  public init()
+  public func startShining(_ view: UIKit.UIView)
+  public func stopShining(_ view: UIKit.UIView)
+  public func startSmartShining(_ view: UIKit.UIView)
+  public func stopSmartShining(_ view: UIKit.UIView)
+  @objc deinit
+}
+open class MarkDown {
+  public static var shared: ChannelizeUI.MarkDown
+  public func tranverseString(string: Swift.String, startingIndex: Swift.Int, textColor: UIKit.UIColor = .black, withFont: UIKit.UIFont = UIFont.systemFont(ofSize: 14.0)) -> Foundation.NSMutableAttributedString
+  @objc deinit
+}
+extension UIImageView {
+  open func setImage(string: Swift.String?, color: UIKit.UIColor? = nil, circular: Swift.Bool = false, stroke: Swift.Bool = false, textAttributes: [Foundation.NSAttributedString.Key : Any]? = nil, size: CoreGraphics.CGSize = .zero)
+}
+extension UIColor {
+  public static var random: UIKit.UIColor {
+    get
+  }
+  public static func colorHash(name: Swift.String?) -> UIKit.UIColor
+}
+extension String {
+  public var initials: Swift.String {
+    get
+  }
+}
+extension URL {
+  public func mimeType() -> Swift.String
+}
+extension NSURL {
+  public func mimeType() -> Swift.String
+}
+extension NSString {
+  public func mimeType() -> Swift.String
+}
+extension String {
+  public func mimeType() -> Swift.String
+}
+public protocol Cache {
+  func slp_getCachedResponse(url: Swift.String) -> ChannelizeUI.Response?
+  func slp_setCachedResponse(url: Swift.String, response: ChannelizeUI.Response?)
+}
+public class DisabledCache : ChannelizeUI.Cache {
+  public static var instance: ChannelizeUI.DisabledCache
+  public func slp_getCachedResponse(url: Swift.String) -> ChannelizeUI.Response?
+  public func slp_setCachedResponse(url: Swift.String, response: ChannelizeUI.Response?)
+  @objc deinit
+}
+open class InMemoryCache : ChannelizeUI.Cache {
+  public init(invalidationTimeout: Foundation.TimeInterval = 300.0, cleanupInterval: Foundation.TimeInterval = 10.0)
+  open func cleanup()
+  open func slp_getCachedResponse(url: Swift.String) -> ChannelizeUI.Response?
+  open func slp_setCachedResponse(url: Swift.String, response: ChannelizeUI.Response?)
+  @objc deinit
+}
+public enum SwiftLinkResponseKey : Swift.String {
+  case url
+  case finalUrl
+  case canonicalUrl
+  case title
+  case description
+  case image
+  case images
+  case icon
+  case video
+  case price
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc open class Cancellable : ObjectiveC.NSObject {
+  public var isCancelled: Swift.Bool {
+    get
+    }
+  open func cancel()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class SwiftLinkPreview : ObjectiveC.NSObject {
+  public var session: Foundation.URLSession
+  final public let workQueue: Dispatch.DispatchQueue
+  final public let responseQueue: Dispatch.DispatchQueue
+  final public let cache: ChannelizeUI.Cache
+  public static var defaultWorkQueue: Dispatch.DispatchQueue
+  @nonobjc public init(session: Foundation.URLSession = URLSession.shared, workQueue: Dispatch.DispatchQueue = SwiftLinkPreview.defaultWorkQueue, responseQueue: Dispatch.DispatchQueue = DispatchQueue.main, cache: ChannelizeUI.Cache = DisabledCache.instance)
+  @objc override dynamic public init()
+  @objc public init(session: Foundation.URLSession?, workQueue: Dispatch.DispatchQueue?, responseQueue: Dispatch.DispatchQueue?, disableInMemoryCache: Swift.Bool, cacheInvalidationTimeout: Foundation.TimeInterval, cacheCleanupInterval: Foundation.TimeInterval)
+  @discardableResult
+  @nonobjc open func preview(_ text: Swift.String, onSuccess: @escaping (ChannelizeUI.Response) -> Swift.Void, onError: @escaping (ChannelizeUI.PreviewError) -> Swift.Void) -> ChannelizeUI.Cancellable
+  @discardableResult
+  @objc open func previewLink(_ text: Swift.String, onSuccess: @escaping (Swift.Dictionary<Swift.String, Any>) -> Swift.Void, onError: @escaping (Foundation.NSError) -> Swift.Void) -> ChannelizeUI.Cancellable
+  @objc deinit
+}
+extension SwiftLinkPreview {
+  open func extractURL(text: Swift.String) -> Foundation.URL?
+}
+extension SwiftLinkPreview : Foundation.URLSessionDataDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
+}
+public protocol AssetListControllerDelegate {
+  func accessAssetImages(assetImages: [UIKit.UIImage])
+  func accessSelectedAssets(assets: [Photos.PHAsset])
+}
+public class ChUI {
+  open var chCurrentChatId: Swift.String?
+  open var currentChatIdUserName: Swift.String
+  open var isCHOpen: Swift.Bool
+  public static var instance: ChannelizeUI.ChUI
+  public static func configure()
+  public static func launchChannelize(navigationController: UIKit.UINavigationController?, data: [Swift.AnyHashable : Any]? = nil)
+  @objc deinit
+}
+extension String {
+  public func with(_ icon: UIKit.UIImage?) -> Foundation.NSMutableAttributedString
+  public func ranges(of substring: Swift.String, options: Swift.String.CompareOptions = [], locale: Foundation.Locale? = nil) -> [Swift.Range<Swift.String.Index>]
+  public func widthOfString(usingFont font: UIKit.UIFont) -> CoreGraphics.CGFloat
+}
+public enum PreviewError : Swift.Error, Swift.CustomStringConvertible {
+  case noURLHasBeenFound(Swift.String?)
+  case invalidURL(Swift.String?)
+  case cannotBeOpened(Swift.String?)
+  case parseError(Swift.String?)
+  public var description: Swift.String {
+    get
+  }
+}
+public class CHConstants {
+  public static var isChannelizeCallAvailable: Swift.Bool
+  public static var isGifStickerMessageEnabled: Swift.Bool
+  public static var isDocumentMessageEnabled: Swift.Bool
+  @objc deinit
+}
+public class CHUIConstants {
+  public static var appDefaultColor: UIKit.UIColor
+  public static var onlineStatusColor: UIKit.UIColor
+  public static var smallFontSize: CoreGraphics.CGFloat
+  public static var mediumFontSize: CoreGraphics.CGFloat
+  public static var normalFontSize: CoreGraphics.CGFloat
+  public static var largeFontSize: CoreGraphics.CGFloat
+  public static var extraLargeFontSize: CoreGraphics.CGFloat
+  public static var incomingTextMessageBackgroundColor: UIKit.UIColor
+  public static var outgoingTextMessageBackgroundColor: UIKit.UIColor
+  public static var incomingTextMessageBubbleColor: UIKit.UIColor
+  public static var outGoingTextMessageBubbleColor: UIKit.UIColor
+  public static var contactNameColor: UIKit.UIColor
+  public static var contactNameFont: UIKit.UIFont?
+  public static var conversationTitleColor: UIKit.UIColor
+  public static var conversationTitleFont: UIKit.UIFont?
+  public static var conversationMessageColor: UIKit.UIColor
+  public static var conversationMessageFont: UIKit.UIFont?
+  public static var conversationUpdatedTimeColor: UIKit.UIColor
+  public static var conversationUpdatedTimeFont: UIKit.UIFont?
+  @objc deinit
+}
+extension UIColor {
+  public convenience init(hex string: Swift.String)
+  public static var customSystemBlue: UIKit.UIColor
+  public static var customSystemGray: UIKit.UIColor
+  public static var customSystemGreen: UIKit.UIColor
+  public static var customSystemIndigo: UIKit.UIColor
+  public static var customSystemOrange: UIKit.UIColor
+  public static var customSystemPink: UIKit.UIColor
+  public static var customSystemPurple: UIKit.UIColor
+  public static var customSystemRed: UIKit.UIColor
+  public static var customSystemTeal: UIKit.UIColor
+  public static var customSystemYellow: UIKit.UIColor
+  public func imageFromColor() -> UIKit.UIImage?
+  public func lighter(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  public func darker(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+  public func adjust(by percentage: CoreGraphics.CGFloat = 30.0) -> UIKit.UIColor?
+}
+public struct Response {
+  public var url: Foundation.URL? {
+    get
+    }
+  public var finalUrl: Foundation.URL? {
+    get
+    }
+  public var canonicalUrl: Swift.String? {
+    get
+    }
+  public var title: Swift.String? {
+    get
+    }
+  public var description: Swift.String? {
+    get
+    }
+  public var images: [Swift.String]? {
+    get
+    }
+  public var image: Swift.String? {
+    get
+    }
+  public var icon: Swift.String? {
+    get
+    }
+  public var video: Swift.String? {
+    get
+    }
+  public var price: Swift.String? {
+    get
+    }
+  public init()
+}
+@objc @IBDesignable open class EZYGradientView : UIKit.UIView {
+  @objc @IBInspectable open var firstColor: UIKit.UIColor {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var secondColor: UIKit.UIColor {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var angleº: Swift.Float {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var colorRatio: Swift.Float {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var fadeIntensity: Swift.Float {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var isBlur: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable open var blurOpacity: Swift.Float {
+    @objc get
+    @objc set(newValue)
+  }
+  open var blurLayer: QuartzCore.CALayer?
+  open var gradientLayer: QuartzCore.CAGradientLayer?
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  @objc deinit
+}
+public var emojiCodes: [Swift.String : Swift.String]
+open class CHCustomStyles {
+  public static var shimmeringColor: UIKit.UIColor
+  public static var incomingMessageTextColor: UIKit.UIColor
+  public static var outgoingMessageTextColor: UIKit.UIColor
+  public static var incomingMessageFont: UIKit.UIFont
+  public static var outgoingMessageFont: UIKit.UIFont
+  public static var incomingMessageEdgeInsets: UIKit.UIEdgeInsets
+  public static var outgoingMessageEdgeInsets: UIKit.UIEdgeInsets
+  public static var quotedIncomingMessageColor: UIKit.UIColor
+  public static var quotedOutgoingMessageColor: UIKit.UIColor
+  public static var photoBubbleSize: CoreGraphics.CGSize
+  public static var videoMessageSize: CoreGraphics.CGSize
+  public static var gifStickerMessageSize: CoreGraphics.CGSize
+  public static var stickerMessageSize: CoreGraphics.CGSize
+  public static var gifMessageSize: CoreGraphics.CGSize
+  public static var locationMessageSize: CoreGraphics.CGSize
+  public static var squarePhotoSize: CoreGraphics.CGSize
+  public static var audioMessageSize: CoreGraphics.CGSize
+  public static var docMessageSize: CoreGraphics.CGSize
+  public static var baseMessageIncomingBackgroundColor: UIKit.UIColor
+  public static var baseMessageOutgoingBackgroundColor: UIKit.UIColor
+  public static var messageDateSeperatorColor: UIKit.UIColor
+  public static var messadeDateSeparatorFont: UIKit.UIFont?
+  public static var recentScreenNameLabelFont: UIKit.UIFont
+  public static var recentScreenNameLabelColor: UIKit.UIColor
+  public static var recentScreenMessageLabelColor: UIKit.UIColor
+  public static var recentScreenTimeLabelFont: UIKit.UIFont
+  public static var recentScreenTimeLabelColor: UIKit.UIColor
+  public static var recentScreenMessageCountColor: UIKit.UIColor
+  public static var recentScreenMessageCountBgColor: UIKit.UIColor
+  public static var recentScreenTableBackgroundColor: UIKit.UIColor
+  public static var recentScreenTableCellBackgroundColor: UIKit.UIColor
+  public static var groupNameLabelColor: UIKit.UIColor
+  public static var groupNameLabelFont: UIKit.UIFont
+  public static var groupStatusLabelColor: UIKit.UIColor
+  public static var groupStatusLabelFont: UIKit.UIFont
+  public static var groupMemberCountLabelColor: UIKit.UIColor
+  public static var groupMemberCountLabelFont: UIKit.UIFont
+  public static var groupCellBackgroundColor: UIKit.UIColor
+  public static var groupsTableBackgroundColor: UIKit.UIColor
+  public static var groupsTableCellShadowColor: CoreGraphics.CGColor
+  public static var contactNameLabelFont: UIKit.UIFont
+  public static var contactNameLabelColor: UIKit.UIColor
+  public static var recentScreenTabTitle: Swift.String
+  public static var contactScreenTabTitle: Swift.String
+  public static var groupScreenTabTitle: Swift.String
+  public static var settingsScreenTabTitle: Swift.String
+  public static var recentScreenTabImage: UIKit.UIImage?
+  public static var contactScreenTabImage: UIKit.UIImage?
+  public static var groupsScreenTabImage: UIKit.UIImage?
+  public static var settingsScreenTabImage: UIKit.UIImage?
+  public static var recentScreenSelectedTabImage: UIKit.UIImage?
+  public static var contactScreenSelectedTabImage: UIKit.UIImage?
+  public static var groupsScreenSelectedTabImage: UIKit.UIImage?
+  public static var settingsScreenSelectedTabImage: UIKit.UIImage?
+  public static var searchBarBackgroundColor: UIKit.UIColor
+  public static var searchBarTextColor: UIKit.UIColor
+  public static var searchBarTintColor: UIKit.UIColor
+  @objc deinit
+}
+open class CHCustomOptions {
+  public static var enableMessageForwarding: Swift.Bool
+  public static var enableMessageQuoting: Swift.Bool
+  public static var enableAudioMessages: Swift.Bool
+  public static var enableImageMessages: Swift.Bool
+  public static var enableVideoMessages: Swift.Bool
+  public static var enableLocationMessages: Swift.Bool
+  public static var enableStickerAndGifMessages: Swift.Bool
+  public static var enableDocSharingMessage: Swift.Bool
+  public static var enableMessageReactions: Swift.Bool
+  public static var maximumImageSize: CoreGraphics.CGFloat
+  public static var maximumVideoSize: CoreGraphics.CGFloat
+  public static var maximumAudioSize: CoreGraphics.CGFloat
+  public static var maximumDocumentSize: CoreGraphics.CGFloat
+  public static var enableAttachments: Swift.Bool
+  public static var showOnlineUsers: Swift.Bool
+  public static var contactTableSeperatorType: UIKit.UITableViewCell.SeparatorStyle
+  public static var contactTableSeperatorColor: UIKit.UIColor
+  public static var contactTableBackgroundColor: UIKit.UIColor
+  public static var contactsTableCellBackgroundColor: UIKit.UIColor
+  public static var enableQuoteMessage: Swift.Bool
+  public static var enableUserOnlineStatus: Swift.Bool
+  public static var enableLastSeenStatus: Swift.Bool
+  public static var showMemberCountInHeader: Swift.Bool
+  public static var keyboardAppearance: UIKit.UIKeyboardAppearance
+  public static var enableSearching: Swift.Bool
+  public static var enableViewProfileButton: Swift.Bool
+  public static var showLogoutButton: Swift.Bool
+  @objc deinit
+}
+public enum FontStyle : Swift.String {
+  case sourceSansProRegular
+  case sourceSansProItalic
+  case sourceSansProSemiBoldItalic
+  case sourceSansProBold
+  case sourceSansProSemiBold
+  case robotoRegular
+  case robotoMedium
+  case robotoItalic
+  case robotoBold
+  case robotoSlabBold
+  case robotoSlabMedium
+  case robotoSlabRegualar
+  case robotoSlabSemiBold
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIFont {
+  public static func loadFontWith(name: Swift.String)
+  public static var loadMyFonts: ()
+  public convenience init?(fontStyle: ChannelizeUI.FontStyle, size: CoreGraphics.CGFloat)
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G95" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="ActivityFeedData" representedClassName="ActivityFeedData" syncable="YES">
+        <attribute name="action_Id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="action_type_body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="action_type_body_params" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="attachment" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="attachmentCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="canComment" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="canDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="canShare" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="commentCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="decoration" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="feed_footer_menus" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="feed_reactions" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="feedMenu" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="feedTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="feedType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hashtags" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="isLike" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isNotificationTurnedOn" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isPinned" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="my_feed_reaction" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="object" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="object_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="object_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="params" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="photo_attachment_count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pin_post_duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="publish_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="share_params_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="share_params_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject_Id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="subjectAvatarImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tags" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="userTag" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="wordStyle" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="CartData" syncable="YES">
+        <attribute name="added_products" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="UserCredentials" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profileImage" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="cover_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="display_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oauth_secret" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oauth_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ActivityFeedData" positionX="-63" positionY="-9" width="128" height="585"/>
+        <element name="CartData" positionX="-63" positionY="135" width="128" height="60"/>
+        <element name="UserCredentials" positionX="-63" positionY="135" width="128" height="103"/>
+        <element name="UserInfo" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>
